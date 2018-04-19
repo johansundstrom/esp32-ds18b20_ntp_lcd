@@ -1,1 +1,7 @@
 ds18b20_ntp_lcd
+
+//LCD_SCL-->ESP32_D22
+
+//LCD_SDA-->ESP32_D21
+
+//DS18B20-->ESP32_D18
