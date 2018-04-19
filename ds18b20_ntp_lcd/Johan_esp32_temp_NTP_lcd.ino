@@ -17,6 +17,7 @@
 #include <Wire.h> 
 #include <OneWire.h> 
 #include <LiquidCrystal_I2C.h>
+#include "config.h"
 
 const char *ssid     = "MdH-Guest";
 const char *password = "Houston201804";
