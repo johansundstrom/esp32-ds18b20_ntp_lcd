@@ -1,1 +1,5 @@
-# esp32-ds18b20_ntp_lcd
+# ESP32 Projekt
+
+Använder ESP32 utvecklingskort från DOIT (2x18 pin)
+
+Samtliga projekt verifierade
