@@ -19,12 +19,6 @@
 #include <LiquidCrystal_I2C.h>
 #include "config.h"
 
-const char *ssid     = "MdH-Guest";
-const char *password = "Houston201804";
-int DS18S20_pin = 18;   //ds18b20 --> ESP32(D18)
-int LCD_address = 0x3f; //I2C address (0x3f)
-int LCD_chars = 16;
-int LCD_rows = 2;
 
 OneWire ds(DS18S20_pin);
 LiquidCrystal_I2C lcd(LCD_address, LCD_chars, LCD_rows);
@@ -36,17 +30,6 @@ NTPClient timeClient(ntpUDP, "europe.pool.ntp.org", 3600*2, 60000);
 // par.3 - offset in S(central european summer time = 3600*2)
 // par.4 - update interval in mS (60k = varje minut)
 
-// Grader Celcius-tecken
-uint8_t centigrade[8] = {
-  B01000,
-  B10100,
-  B01000,
-  B00011,
-  B00100,
-  B00100,
-  B00011,
-  B00000
-};
 
 void setup(){
   Serial.begin(115200);
