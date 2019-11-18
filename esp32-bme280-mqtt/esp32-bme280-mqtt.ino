@@ -11,8 +11,8 @@
 #include <Adafruit_Sensor.h>
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "b9-2";
-const char* password = "onsdagsklubben";
+const char* ssid = "ssid-here";
+const char* password = "password-here";
 const char* mqtt_server = "be9.asuscomm.com";
 const char* temp_topic = "b9/temperature";
 const char* humid_topic = "b9/humidity";
