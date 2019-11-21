@@ -2,6 +2,9 @@
   Rui Santos
   Complete project details at https://randomnerdtutorials.com  
   https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/
+  
+  GPIO22 - SCL
+  GPIO21 - SDA
 *********/
 
 #include <WiFi.h>
@@ -19,6 +22,8 @@ const char* humid_topic = "b9/humidity";
 const char* pres_topic = "b9/pressure";
 const char* alt_topic = "b9/altitude";
 const char* sub_topic = "b9/esp32/led";
+const char* on_value = "on";
+const char* off_value = "off";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -96,12 +101,12 @@ void callback(char* topic, byte* message, unsigned int length) {
   // Changes the output state according to the message
   if (String(topic) == sub_topic) {
     Serial.print("Changing output to ");
-    if(messageTemp == "on"){
-      Serial.println("on");
+    if(messageTemp == on_value){
+      Serial.println(on_value);
       digitalWrite(LED_BUILTIN, HIGH);
     }
-    else if(messageTemp == "off"){
-      Serial.println("off");
+    else if(messageTemp == off_value){
+      Serial.println(off_value);
       digitalWrite(LED_BUILTIN, LOW);
     }
   }
