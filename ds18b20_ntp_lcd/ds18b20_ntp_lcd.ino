@@ -1,15 +1,16 @@
-//Initial I2C LCD example from:
-//http://arduino-info.wikispaces.com/LCD-Blue-I2C
+// Initial I2C LCD example from:
+// http://arduino-info.wikispaces.com/LCD-Blue-I2C
+// LÖibrary at https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library
 
-//Initial DS18B20 example from:
-//http://bildr.org/2011/07/ds18b20-arduino/
+// Initial DS18B20 example from:
+// http://bildr.org/2011/07/ds18b20-arduino/
 
-//Read the DS18B20 and then write to an I2C LCD and serial monitor
-//http://www.hoaglun.com/blog/2013/1/31/arduino-ds18b20-i2c-lcd
+// Read the DS18B20 and then write to an I2C LCD and serial monitor
+// http://www.hoaglun.com/blog/2013/1/31/arduino-ds18b20-i2c-lcd
 
-//LCD_SCL-->ESP32_D22
-//LCD_SDA-->ESP32_D21
-//DS18B20-->ESP32_D18
+// LCD_SCL-->ESP32_D22
+// LCD_SDA-->ESP32_D21
+// DS18B20-->ESP32_D18
 
 #include "config.h"
 #include <WiFi.h>
@@ -18,6 +19,7 @@
 #include <Wire.h> 
 #include <OneWire.h> 
 #include <LiquidCrystal_I2C.h>
+//#include <LiquidCrystal_PCF8574.h>
 
 
 OneWire ds(DS18S20_pin);
