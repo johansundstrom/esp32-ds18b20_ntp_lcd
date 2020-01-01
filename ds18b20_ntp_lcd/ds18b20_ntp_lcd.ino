@@ -1,6 +1,6 @@
 // Initial I2C LCD example from:
 // http://arduino-info.wikispaces.com/LCD-Blue-I2C
-// LÖibrary at https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library
+
 
 // Initial DS18B20 example from:
 // http://bildr.org/2011/07/ds18b20-arduino/
@@ -18,8 +18,7 @@
 #include <WiFiUdp.h>
 #include <Wire.h> 
 #include <OneWire.h> 
-#include <LiquidCrystal_I2C.h>
-//#include <LiquidCrystal_PCF8574.h>
+#include <LiquidCrystal_I2C.h>  // Library at https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library
 
 
 OneWire ds(DS18S20_pin);
@@ -29,7 +28,7 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "europe.pool.ntp.org", 3600*2, 60000);
 // par.1 - ntpUDP 
 // par.2 - ntp-pool (time.nist.gov}
-// par.3 - offset in S(central european summer time = 3600*2)
+// par.3 - offset in S(central european summer time = 3600*1)
 // par.4 - update interval in mS (60k = varje minut)
 
 
